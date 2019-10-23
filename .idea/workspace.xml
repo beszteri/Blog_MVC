@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="578a0088-046e-4cb8-ba03-8184b4ad2430" name="Default Changelist" comment="" />
+    <list default="true" id="578a0088-046e-4cb8-ba03-8184b4ad2430" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/conrollers/homeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/Application.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/Database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lib/Model.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +42,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\szallasBlogMVC\public" />
+      <recent name="C:\xampp\htdocs\szallasBlogMVC\app" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -53,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571824452824</updated>
-      <workItem from="1571824453974" duration="3668000" />
+      <workItem from="1571824453974" duration="18827000" />
     </task>
     <servers />
   </component>
