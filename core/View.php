@@ -4,7 +4,7 @@
 class View
 {
 
-    protected $_head, $_body, $_siteTitle, $outputBuffer, $_layout = DEFAULT_LAYOUT;
+    protected $_head, $_body, $_siteTitle = SITE_TITLE, $_outputBuffer, $_layout = DEFAULT_LAYOUT;
 
     /**
      * View constructor.
@@ -31,6 +31,38 @@ class View
             return $this->_body;
         }
         return false;
+    }
+
+    public function start($type){
+        $this->_outputBuffer = $type;
+        ob_start();
+    }
+
+    public function end(){
+        if($this->_outputBuffer == 'head'){
+            $this->_head = ob_get_clean();
+        }elseif ($this->_outputBuffer == 'body') {
+            $this->_body = ob_get_clean();
+        }else{
+            die('You must first run the start method');
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getSiteTitle()
+    {
+        return $this->_siteTitle;
+    }
+
+
+    public function setSiteTitle($title){
+        $this->_siteTitle = $title;
+    }
+
+    public function setLayout($path){
+        $this->_layout = $path;
     }
 
 }

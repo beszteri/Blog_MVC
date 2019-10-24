@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="578a0088-046e-4cb8-ba03-8184b4ad2430" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/helpers/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/helpers/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Application.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/View.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/conrollers/homeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Application.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/View.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571824452824</updated>
       <workItem from="1571824453974" duration="24070000" />
-      <workItem from="1571927904164" duration="8126000" />
+      <workItem from="1571927904164" duration="9703000" />
     </task>
     <servers />
   </component>
