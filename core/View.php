@@ -6,9 +6,6 @@ class View
 
     protected $_head, $_body, $_siteTitle = SITE_TITLE, $_outputBuffer, $_layout = DEFAULT_LAYOUT;
 
-    /**
-     * View constructor.
-     */
     public function __construct()
     {
     }
@@ -16,9 +13,9 @@ class View
     public function render($viewName){
         $viewArray = explode('/', $viewName);
         $viewString = implode(DS, $viewArray);
-        if(file_exists(ROOT . DS . 'app' . DS . 'views' . $viewString . '.php')) {
-            include(ROOT . DS . 'app' . DS . 'views' . $viewString . '.php');
-            include(ROOT . DS . 'app' . DS . 'views' . 'layouts' . DS . $this->_layout . '.php');
+        if(file_exists(ROOT . DS . 'app' . DS . 'views' . DS . $viewString . '.php')) {
+            include(ROOT . DS . 'app' . DS . 'views' . DS . $viewString . '.php');
+            include(ROOT . DS . 'app' . DS . 'views' . DS . 'layouts' . DS . $this->_layout . '.php');
         } else {
             die('View does not exist');
         }
@@ -51,7 +48,7 @@ class View
     /**
      * @return string
      */
-    public function getSiteTitle()
+    public function SiteTitle()
     {
         return $this->_siteTitle;
     }
