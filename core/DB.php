@@ -25,4 +25,39 @@ class DB
         return self::$_instance;
     }
 
+    public function query($sql, $params = []) {
+        $this->_error = false;
+        if($this->_query = $this->_pdo->prepare($sql)){
+            $x = 1;
+            if(count($params)){
+                foreach ($params as $param){
+                    $this->_query->bindValue($x, $param);
+                    $x++;
+                }
+            }
+            if($this->_query->execute()){
+                $this->_result = $this->_query->fetchAll(PDO::FETCH_OBJ);
+                $this->_count = $this->_query->rowCount();
+                $this->_lastInsertID = $this->_pdo->lastInsertId();
+            }else {
+                $this->_error = true;
+            }
+        }
+        return $this;
+    }
+
+    public function insert($table, $fields = []){
+        $fieldString = '';
+        $valueString = '';
+        $values = [];
+
+        foreach ($fields as $field => $value){
+
+        }
+    }
+
+    public function error(){
+        return $this->_error;
+    }
+
 }
