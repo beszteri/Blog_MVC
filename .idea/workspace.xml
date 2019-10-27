@@ -2,11 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="578a0088-046e-4cb8-ba03-8184b4ad2430" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/Model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Config/core.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/postsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dispatcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Router.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Layouts/default.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Posts/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Posts/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Posts/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Webroot/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Webroot/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Tools.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/helpers/functions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/helpers/helpers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/default.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tools/first.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tools/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tools/second.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tools/third.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Application.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/DB.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Model.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/View.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jQuery-2.2.4.min.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +110,8 @@
       <option name="presentableId" value="Default" />
       <updated>1571824452824</updated>
       <workItem from="1571824453974" duration="24070000" />
-      <workItem from="1571927904164" duration="19317000" />
+      <workItem from="1571927904164" duration="23206000" />
+      <workItem from="1572183332700" duration="676000" />
     </task>
     <servers />
   </component>
