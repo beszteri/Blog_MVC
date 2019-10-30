@@ -1,30 +1,28 @@
 <?php
 class postsController extends Controller
 {
-    function index()
+    function index($params)
     {
         require(ROOT . 'Models/Post.php');
+        require(ROOT . 'Core/Pagination.php');
         $posts = new Post();
-        //melyik oldalon vagyunk jelenleg
-        if(!isset($_GET['page'])) {
-            $page = 1;
-        } else {
-            $page = $_GET['page'];
-        }
+        $page = new Pagination();
+        
 
-        //beállítja az sql LIMIT kezdőszámát
-        $thisPageFirstResult = ($page - 1) * 10;
-        $d['posts'] = $posts->showLimitedPost($thisPageFirstResult, 10);
-        $allPosts = $posts->showAllPosts();
-        $numberOfAllPosts['numberOfAllPosts'] = count($allPosts);
-
-        $this->setNumberOfAllPosts($numberOfAllPosts);
+        $data = $posts->showAllPosts();
+        $numbers = $page->Paginate($data,10, $params);
+        $result = $page->fetchResult();
+        
+        $d['posts'] = $result;
+        $d['numbers'] = $numbers;
         $this->set($d);
         $this->render("index");
+     
     }
 
     function create()
     {
+        $this->render("create");
         if (isset($_POST["title"]))
         {
             require(ROOT . 'Models/Post.php');
@@ -32,7 +30,6 @@ class postsController extends Controller
             $posts->create($_POST["title"], $_POST["description"]);
             header("Location: " . WEBROOT . "posts/index");
         }
-        $this->render("create");
     }
 
     function edit($id)

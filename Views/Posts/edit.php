@@ -1,5 +1,5 @@
 <h1>Edit post</h1>
-<form method='post' action='#'>
+<form method='post'>
     <div class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" placeholder="Enter a title" name="title" value ="<?php if (isset($post["title"]))

@@ -11,7 +11,7 @@ class Router
         {
             $request->controller = "posts";
             $request->action = "index";
-            $request->params = [];
+            $request->params = ["1"];
         }
         else
         {

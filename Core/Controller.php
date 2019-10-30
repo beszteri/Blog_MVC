@@ -3,12 +3,6 @@ class Controller
 {
     public $vars = [];
     public $layout = "default";
-    public $numberOfAllPosts = [];
-
-    public function setNumberOfAllPosts($numberOfAllPosts)
-    {
-        $this->numberOfAllPosts = $numberOfAllPosts;
-    }
 
     function set($d)
     {
@@ -21,7 +15,7 @@ class Controller
         //This function uses array keys as variable names and values as variable values.
         //For each element it will create a variable in the current symbol table.
         extract($this->vars);
-        extract($this->numberOfAllPosts);
+        //extract($this->numberOfAllPosts);
         ob_start();
         //??
         require(ROOT . "Views/" . ucfirst(str_replace('Controller', '',
@@ -30,7 +24,7 @@ class Controller
 
         if ($this->layout == false)
         {
-            $content_for_layout;
+            $content_for_layout = "default";
         }
         else
         {

@@ -1,3 +1,10 @@
+<?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
+
+?>
 <!doctype html>
 <head>
     <meta charset="utf-8">
@@ -21,6 +28,8 @@
 </head>
 
 <body>
+
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Szállás.hu Blog</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -34,13 +43,24 @@
             <li class="nav-item active">
                 <a class="nav-link" href="http://localhost/blogmvc/posts/index">Home <span class="sr-only">(current)</span></a>
             </li>
+            <?php
+            if(isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == "true"){
+                echo '<li class="nav-item active">
+                    <a class="nav-link" href="http://localhost/blogmvc/logout/logout">Logout <span class="sr-only">(current)</span></a>
+                </li>';
+            }else{
+            echo '<li class="nav-item active">
+                    <a class="nav-link" href="http://localhost/blogmvc/login/login">Login <span class="sr-only">(current)</span></a>
+                </li>';
+            }
+            ?>
         </ul>
     </div>
 </nav>
 
 <main role="main" class="container">
 
-    <div class="starter-template">
+   <div class="starter-template"> 
         <?php
         echo $content_for_layout;
         ?>

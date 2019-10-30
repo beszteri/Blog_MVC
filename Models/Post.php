@@ -24,8 +24,8 @@ class Post extends Model
         return $req->fetch();
     }
 
-    public function showLimitedPost($from, $limit) {
-        $sql = "SELECT * FROM posts LIMIT " . $from . "," . $limit . ";";
+    public function showLimitedPost($from) {
+        $sql = "SELECT * FROM posts LIMIT " . $from . "," . 10 . ";";
         $req = Database::getBdd()->prepare($sql);
         $req->execute();
         $limitedPosts = $req->fetchAll(PDO::FETCH_ASSOC);
@@ -42,7 +42,7 @@ class Post extends Model
 
     public function edit($id, $title, $description)
     {
-        $sql = "UPDATE tasks SET posts = :title, description = :description , updated_at = :updated_at WHERE id = :id";
+        $sql = "UPDATE posts SET title = :title, description = :description , updated_at = :updated_at WHERE id = :id";
 
         $req = Database::getBdd()->prepare($sql);
 

@@ -1,3 +1,8 @@
+<?php
+session_start();
+var_dump($_SESSION["isLoggedIn"]);
+?>
+
 <h1>Create Post</h1>
 <form method='post' action='#'>
     <div class="form-group">
