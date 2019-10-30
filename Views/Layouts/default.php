@@ -1,9 +1,5 @@
 <?php
-if(!isset($_SESSION)) 
-{ 
-    session_start(); 
-} 
-
+Session::init()
 ?>
 <!doctype html>
 <head>
@@ -41,10 +37,10 @@ if(!isset($_SESSION))
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost/blogmvc/posts/index">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="http://localhost/blogmvc/posts/index/1">Home <span class="sr-only">(current)</span></a>
             </li>
             <?php
-            if(isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == "true"){
+            if(Session::checkSession()){
                 echo '<li class="nav-item active">
                     <a class="nav-link" href="http://localhost/blogmvc/logout/logout">Logout <span class="sr-only">(current)</span></a>
                 </li>';

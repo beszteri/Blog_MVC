@@ -1,10 +1,9 @@
-<?php
-session_start();
-var_dump($_SESSION["isLoggedIn"]);
-?>
+<?php 
+Session::init()
+?> 
 
 <h1>Create Post</h1>
-<form method='post' action='#'>
+<form method='post' enctype="multipart/form-data">
     <div class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" placeholder="Enter a title" name="title">
@@ -14,5 +13,6 @@ var_dump($_SESSION["isLoggedIn"]);
         <label for="description">Description</label>
         <input type="text" class="form-control" id="description" placeholder="Enter a description" name="description">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <input type="file" name="image">
+    <button type="submit" value="Upload" class="btn btn-primary">Submit</button>
 </form>

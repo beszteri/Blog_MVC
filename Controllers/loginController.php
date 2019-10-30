@@ -18,6 +18,7 @@ class loginController extends Controller
                 header("Location: " . WEBROOT . "posts/index/1");
                 
             }else{
+                $_SESSION['loginError'] = true;
                 header("Location: " . WEBROOT . "login/login");
             }
         }

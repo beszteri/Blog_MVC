@@ -1,3 +1,11 @@
+<?php
+Session::init();
+if(Session::checkError()){
+    echo '<p style="background-color:red;">Wrong username or password</p>';
+}
+unset($_SESSION["loginError"]);
+?>
+
 <h1>Login</h1>
 <form method='post'>
     <div class="form-group">

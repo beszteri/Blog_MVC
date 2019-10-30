@@ -1,15 +1,16 @@
 <?php
 class Post extends Model
 {
-    public function create($title, $description)
+    public function create($title, $description, $image)
     {
-        $sql = "INSERT INTO posts (title, description, created_at, updated_at) VALUES (:title, :description, :created_at, :updated_at)";
+        $sql = "INSERT INTO posts (title, description, image, created_at, updated_at) VALUES (:title, :description, :image, :created_at, :updated_at)";
 
         $req = Database::getBdd()->prepare($sql);
 
         return $req->execute([
             'title' => $title,
             'description' => $description,
+            'image' => $image,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
 
@@ -40,15 +41,16 @@ class Post extends Model
         return $req->fetchAll();
     }
 
-    public function edit($id, $title, $description)
+    public function edit($id, $title, $description, $image)
     {
-        $sql = "UPDATE posts SET title = :title, description = :description , updated_at = :updated_at WHERE id = :id";
+        $sql = "UPDATE posts SET title = :title, description = :description , image = :image, updated_at = :updated_at WHERE id = :id";
 
         $req = Database::getBdd()->prepare($sql);
 
         return $req->execute([
             'id' => $id,
             'title' => $title,
+            'image' => $image,
             'description' => $description,
             'updated_at' => date('Y-m-d H:i:s')
 
@@ -61,4 +63,7 @@ class Post extends Model
         $req = Database::getBdd()->prepare($sql);
         return $req->execute([$id]);
     }
+
+    
+
 }

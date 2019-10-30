@@ -4,6 +4,11 @@ class Controller
     public $vars = [];
     public $layout = "default";
 
+    static function DD($var){
+        var_dump($var);
+        die();
+    }
+
     function set($d)
     {
         $this->vars = array_merge($this->vars, $d);

@@ -27,8 +27,11 @@ class postsController extends Controller
         {
             require(ROOT . 'Models/Post.php');
             $posts= new Post();
-            $posts->create($_POST["title"], $_POST["description"]);
-            header("Location: " . WEBROOT . "posts/index");
+            $image = addslashes($_FILES['image']['tmp_name']);
+            $image = file_get_contents($image);
+            $image = base64_encode($image);
+            $posts->create($_POST["title"], $_POST["description"], $image);
+            header("Location: " . WEBROOT . "posts/index/1");
         }
     }
 
@@ -41,8 +44,11 @@ class postsController extends Controller
         $this->render("edit");
         if (isset($_POST["title"]))
         {
-            $posts->edit($id, $_POST["title"], $_POST["description"]);
-            header("Location: " . WEBROOT . "posts/index");
+            $image = addslashes($_FILES['image']['tmp_name']);
+            $image = file_get_contents($image);
+            $image = base64_encode($image);
+            $posts->edit($id, $_POST["title"], $_POST["description"], $image);
+            header("Location: " . WEBROOT . "posts/index/1");
         }
     }
 
@@ -51,6 +57,6 @@ class postsController extends Controller
         require(ROOT . 'Models/Post.php');
         $posts = new Post();
         $posts->delete($id);
-        header("Location: " . WEBROOT . "posts/index");
+        header("Location: " . WEBROOT . "posts/index/1");
     }
 }
